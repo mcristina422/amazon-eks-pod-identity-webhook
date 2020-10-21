@@ -31,13 +31,11 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/serializer"
 	"k8s.io/klog"
-	"k8s.io/kubernetes/pkg/apis/core/v1"
 )
 
 func init() {
 	_ = corev1.AddToScheme(runtimeScheme)
 	_ = admissionregistrationv1beta1.AddToScheme(runtimeScheme)
-	_ = v1.AddToScheme(runtimeScheme)
 }
 
 var (
